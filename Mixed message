@@ -1,0 +1,40 @@
+//generate a random number as index for pick an element in the arrays
+const generateNum = (num) => {
+    return Math.floor(Math.random() * num);
+}
+
+//object with the elements to be picked randomly
+const inspirational = {
+    subject: ["work", "life", "love", "health", "money"],
+    message: ["will be great", "will be good", "will be bad", "will be terrible"],
+    advice: ["be positive", "be patient", "be kind"]
+}
+
+//array to store the inspirational message
+let inspirationalMessage = [];
+
+//iterate over the object
+for (element in inspirational) {
+    let index = generateNum(inspirational[element].length);
+
+    switch (element) {
+        case 'subject':
+            inspirationalMessage.push(`Your ${inspirational[element][index]}`);
+            break;
+        case 'message':
+            inspirationalMessage.push(`${inspirational[element][index]}.`);
+            break;
+        case 'advice':
+            inspirationalMessage.push(`You should ${inspirational[element][index]}.`);
+            break;
+        default:
+            inspirationalMessage.push('There is not enough info.');
+    }
+}
+
+const generateMessage = (message) => {
+    const formattedMessage = inspirationalMessage.join(' ');
+    console.log(formattedMessage);
+}
+
+generateMessage(inspirationalMessage);
