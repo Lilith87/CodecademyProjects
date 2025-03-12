@@ -1,0 +1,29 @@
+h1 {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 40px;
+  color: darkblue;
+  font-weight: bold;
+  background-color: #010c3f;
+  color: #fff;
+  margin: 0;
+}
+
+.highlight {
+  color: purple;
+  font-size: 45px;
+}
+
+.App {
+  background-image: url('./background_photo_desktop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.App-playlist {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
